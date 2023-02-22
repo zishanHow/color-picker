@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="input-section">
+            <input type="color" class="color-input" name="color" id="color">
+            <select name="choose-color" class="choose-color" id="choose-color">
+                <option class="opt" value="monochrome">Monochrome</option>
+                <option class="opt" value="monochrome-dark">Monochrome-dark</option>
+                <option class="opt" value="monochrome-light">Monochrome-light</option>
+                <option class="opt" value="analogic">Analogic</option>
+                <option class="opt" value="complement">Complement</option>
+                <option class="opt" value="analogic-complement">Analogic-complement</option>
+                <option class="opt" value="triad">Triad</option>
+            </select>
+            <button type="submit" class="btn">Get color scheme</button>
+        </section>
+
+        <section class="render-color-section" id="render-color-section">
+            <div data-hex="dflklkf" class="rendering-color" id="rendering-color">
+                <p class="color-name">444</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 550px;
+    margin: 0 auto;
+    /* border: 2px solid red; */
+}
+
+.input-section{
+    width: 550px;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid red;
+}
+
+input[type=color]{
+    width: 55px;
+    height: 35px;
+}
+
+select{
+    width: 312px;
+    height: 42px;
+}
+
+.btn{
+    width: 123px;
+    height: 42px;
+}
+
+.render-color-section{
+    margin-top: 2px;
+    width: 550px;
+    height: 550px;
+    border: 1px solid orange;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.rendering-color{
+    border: 1px solid goldenrod;
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
