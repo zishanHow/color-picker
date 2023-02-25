@@ -5,7 +5,12 @@
 }
 
 body{
-    background-color: #1d3557;
+    background: radial-gradient(circle, rgba(76,97,102,1) 0%, rgba(68,60,104,1) 100%);
+    font-family: 'Oswald', sans-serif;
+}
+
+@keyframes colors {
+	100% { filter: hue-rotate(360deg); }
 }
 
 main{
@@ -13,6 +18,8 @@ main{
     margin: 0 auto;
     /* border: 2px solid red; */
     padding: 5px;
+    /* border: 1px solid white; */
+    box-shadow: 0px 0px 5px lightblue;
 }
 
 .input-section{
@@ -21,21 +28,26 @@ main{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: #1F2937;
+    background: #18122B;
 }
 
 input[type=color]{
     width: 20%;
-    height: 50px;
+    height: 55px;
     border-radius: 6px;
 }
 
 select{
+    font-family: inherit;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+
     width: 30%;
-    height: 42px;
+    height: 55px;
     color: #D1D5DB;
-    background: transparent;
-    border: 2px solid #D1D5DB;
+    background: #443C68;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
 }
 
 select .opt{
@@ -44,12 +56,18 @@ select .opt{
 
 
 .btn{
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.2rem;
+
     width: 40%;
-    height: 42px;
-    background: #3D4B60;
+    height: 55px;
+    text-transform: uppercase;
+    background-color: #443C68;
     color: #FFFFFF;
     border: none;
-    border-radius: 4px;
+    border: 1px solid #EEDDDD;
+    border-radius: 6px;
     cursor: pointer;
     transition: all 0.5s;
 }
@@ -61,10 +79,19 @@ select .opt{
     max-width: 800px;
     /* height: 550px; */
     min-height: 300px;
-    height: 70vh;
+    height: 72vh;
 
     display: flex;
     justify-content: space-between;
+}
+
+.instruction{
+    margin: 100px;
+    color: #edf2f4;
+    letter-spacing: 1px;
+}
+.instruction span{
+    font-weight: 700;
 }
 
 .rendering-color{
@@ -80,7 +107,7 @@ select .opt{
 footer{
     max-width: 800px;
     height: 90px;
-    background: #1F2937;
+    background: #18122B;
 
     display: flex;
 }

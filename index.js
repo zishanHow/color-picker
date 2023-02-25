@@ -38,6 +38,7 @@ document.addEventListener("click", (e) => {
         navigator.clipboard.writeText(e.target.dataset.hex)
             .then(() => {
                 console.log("Text Copid to clipboard")
+                alert("Text Copid to clipboard")
             })
             .catch((error) => {
                 console.error("Failed to copy text: ", error)
@@ -48,6 +49,7 @@ document.addEventListener("click", (e) => {
         navigator.clipboard.writeText(e.target.dataset.fhex)
             .then(() => {
                 console.log("Text Copid to clipboard")
+                alert("Text Copid to clipboard")
             })
             .catch((error) => {
                 console.error("Failed to copy text: ", error)
@@ -64,7 +66,7 @@ function renderColorDiv(color){
         //console.log(unit)
         colorHtml += ` 
                 <div data-hex='${unit}' class="rendering-color" id="rendering-color" style="background-color:${unit};">
-                    <p class="color-name" id="color-name">${unit}</p>
+                    
                 </div>
         `
     })
