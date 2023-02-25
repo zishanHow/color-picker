@@ -20,10 +20,32 @@ function getScheme(){
     })
 }
 
+// btn.addEventListener("click", () => {
+//     getScheme()
+// })
 
-btn.addEventListener("click", () => {
-    getScheme()
+
+
+document.addEventListener("click", (e) => {
+    if(e.target.id === "btn"){
+        console.log(e.target.id)
+        getScheme()
+    }
+    else if(e.target.dataset.hex || e.target.id === "color-name"){
+        console.log(e.target.dataset.hex)
+        navigator.clipboard.writeText(e.target.dataset.hex)
+            .then(() => {
+                console.log("Text Copid to clipboard")
+            })
+            .catch((error) => {
+                console.error("Failed to copy text: ", error)
+            })
+    }
 })
+
+
+
+
 
 function renderColorDiv(color){
     //console.log(color)
@@ -33,7 +55,7 @@ function renderColorDiv(color){
         //console.log(unit)
         html += ` 
                 <div data-hex=${unit} class="rendering-color" id="rendering-color" style="background-color:${unit};">
-                    <p class="color-name">${unit}</p>
+                    <p class="color-name" id="color-name">${unit}</p>
                 </div>
         `
     })
