@@ -4,6 +4,7 @@ const chooseMode = document.getElementById("choose-mode")
 
 const btn = document.getElementById("btn")
 const renderColorSection = document.getElementById("render-color-section")
+const footerEl = document.getElementById("footer")
 
 
 function getScheme(){
@@ -17,6 +18,7 @@ function getScheme(){
         })
         //console.log(colorArray)
         renderColorDiv(colorArray)
+        renderFooter(colorArray)
     })
 }
 
@@ -28,7 +30,7 @@ function getScheme(){
 
 document.addEventListener("click", (e) => {
     if(e.target.id === "btn"){
-        console.log(e.target.id)
+        //console.log(e.target.id)
         getScheme()
     }
     else if(e.target.dataset.hex || e.target.id === "color-name"){
@@ -41,24 +43,44 @@ document.addEventListener("click", (e) => {
                 console.error("Failed to copy text: ", error)
             })
     }
+    else if(e.target.dataset.fhex){
+        console.log(e.target.dataset.fhex)
+        navigator.clipboard.writeText(e.target.dataset.fhex)
+            .then(() => {
+                console.log("Text Copid to clipboard")
+            })
+            .catch((error) => {
+                console.error("Failed to copy text: ", error)
+            })
+    }
 })
-
-
-
 
 
 function renderColorDiv(color){
     //console.log(color)
-    let html = ``
+    let colorHtml = ``
 
     color.forEach((unit) => {
         //console.log(unit)
-        html += ` 
-                <div data-hex=${unit} class="rendering-color" id="rendering-color" style="background-color:${unit};">
+        colorHtml += ` 
+                <div data-hex='${unit}' class="rendering-color" id="rendering-color" style="background-color:${unit};">
                     <p class="color-name" id="color-name">${unit}</p>
                 </div>
         `
     })
+    renderColorSection.innerHTML = colorHtml
+}
 
-    renderColorSection.innerHTML = html
+
+
+function renderFooter(color) {
+    let footerHtml = ``
+
+    color.forEach((unit) => {
+        //console.log(unit)
+        footerHtml += `
+            <p data-fhex='${unit}' class="ftr-p" id="ftr-p">${unit}</p>
+        `
+    })
+    footerEl.innerHTML = footerHtml
 }
