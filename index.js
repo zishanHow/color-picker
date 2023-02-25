@@ -30,7 +30,13 @@ function renderColorDiv(color){
     let html = ``
 
     color.forEach((unit) => {
-        console.log(unit)
+        //console.log(unit)
+        html += ` 
+                <div data-hex=${unit} class="rendering-color" id="rendering-color" style="background-color:${unit};">
+                    <p class="color-name">${unit}</p>
+                </div>
+        `
     })
-}
 
+    renderColorSection.innerHTML = html
+}
