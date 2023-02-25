@@ -1,28 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background: radial-gradient(circle, rgba(76,97,102,1) 0%, rgba(68,60,104,1) 100%);
+body {
+    background: radial-gradient(circle, rgba(76, 97, 102, 1) 0%, rgba(68, 60, 104, 1) 100%);
     font-family: 'Oswald', sans-serif;
 }
 
 @keyframes colors {
-	100% { filter: hue-rotate(360deg); }
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }
 
-main{
+main {
     max-width: 800px;
     margin: 0 auto;
-    /* border: 2px solid red; */
     padding: 5px;
-    /* border: 1px solid white; */
     box-shadow: 0px 0px 5px lightblue;
 }
 
-.input-section{
+.input-section {
     max-width: 800px;
     height: 90px;
     display: flex;
@@ -31,13 +31,13 @@ main{
     background: #18122B;
 }
 
-input[type=color]{
+input[type=color] {
     width: 20%;
     height: 55px;
     border-radius: 6px;
 }
 
-select{
+select {
     font-family: inherit;
     letter-spacing: 1px;
     font-size: 1.2rem;
@@ -50,12 +50,12 @@ select{
     border-radius: 6px;
 }
 
-select .opt{
+/* option */
+select .opt {
     background: #1F2937;
 }
 
-
-.btn{
+.btn {
     font-family: inherit;
     font-weight: 700;
     font-size: 1.2rem;
@@ -71,13 +71,13 @@ select .opt{
     cursor: pointer;
     transition: all 0.5s;
 }
-.btn:hover{
+
+.btn:hover {
     transform: scale(1.1);
 }
 
-.render-color-section{
+.render-color-section {
     max-width: 800px;
-    /* height: 550px; */
     min-height: 300px;
     height: 72vh;
 
@@ -85,16 +85,22 @@ select .opt{
     justify-content: space-between;
 }
 
-.instruction{
+.instruction {
     margin: 100px;
     color: #edf2f4;
     letter-spacing: 1px;
 }
-.instruction span{
+
+.instruction .check-mark-text {
+    display: block;
+    letter-spacing: 0;
+}
+
+.instruction span {
     font-weight: 700;
 }
 
-.rendering-color{
+.rendering-color {
     width: 20%;
     height: 100%;
 
@@ -104,7 +110,7 @@ select .opt{
 }
 
 
-footer{
+footer {
     max-width: 800px;
     height: 90px;
     background: #18122B;
@@ -112,7 +118,7 @@ footer{
     display: flex;
 }
 
-.ftr-p{
+.ftr-p {
     width: 20%;
     height: 100%;
     border: 1px solid white;
